@@ -65,5 +65,5 @@ sh shell-scripts/ec2-instances-list-filtered.sh filters.json
 #### 8 Clean up EC2 instance
 
 ```shell
-sh shell-scripts/stack-delete.sh template-stack
+sh shell-scripts/stack-delete.sh demoStack
 ```
