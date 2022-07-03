@@ -43,7 +43,7 @@ aws ec2 describe-key-pairs
 #### 3 Create EC2 instance for testing
 
 ```shell
-sh shell-scripts/stack-create.sh demo-stack template.yml
+sh shell-scripts/stack-create.sh template.yml
 ```
 
 ```shell
