@@ -47,11 +47,11 @@ sh shell-scripts/stack-create.sh template.yml
 ```
 
 ```shell
-sh shell-scripts/stack-list-created
+sh shell-scripts/stacks-list-created.sh
 ```
 
 ```shell
-sh shell-scripts/ec2-instances-list-filtered filters.json
+sh shell-scripts/ec2-instances-list-filtered.sh filters.json
 ```
 
 #### 4 Bring in Ansible Playbook from previous exercise
