@@ -32,7 +32,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           # Obtain ID from where SSH key is registered
-          fingerprints: ["..."] 
+          fingerprints: ["88:5b:9d:8e:db:f6:38:22:80:dd:e3:7d:23:80:b7:0b"] 
       - run:
           name: Install dependencies
           command: |
