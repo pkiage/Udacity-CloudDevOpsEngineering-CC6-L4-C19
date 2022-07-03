@@ -4,7 +4,11 @@
         "Values": ["t2.micro"]
     },
     {
-        "Name": "availability-zone",
-        "Values": ["us-west-2c"]
+        "Name": "image-id",
+        "Values": ["ami-0ddf424f81ddb0720"]
+    },
+    {
+        "Name": "key-name",
+        "Values": ["udacity-ansible"]
     }
 ]
