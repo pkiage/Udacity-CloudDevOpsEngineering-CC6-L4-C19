@@ -1,0 +1,46 @@
+---
+- name: "update apt packages."
+  become: TRUE
+  apt:
+    update_cache: yes
+
+- name: "upgrade packages"
+  become: TRUE
+  apt:
+    upgrade: yes
+
+# OTHER PLAYS
+- name: remove dependencies that are no longer required
+  become: TRUE
+  apt:
+    autoremove: yes # use apt module to remove dependencies that are no longer required
+
+- name: "install dependencies."
+  become: TRUE
+  apt:
+    name: ["nodejs", "npm"] # dependencies being installed
+    state: latest
+    update_cache: yes
+
+- name: "install pm2"
+  become: TRUE
+  npm: #install pm2 using npm module now that we've got node installed
+    name: pm2
+    global: yes
+    production: yes
+    state: present
+
+- name: Creates directory
+  file:
+    path: ~/web # create a directory named web
+    state: directory
+
+- name: Copy index test page
+  template:
+    src: "files/index.js" # location of index test page being copied 
+    dest: "~/web/index.js" # where index test page is being copied to
+
+- name: Executing node
+  # execute the command below to start the web application and keep it running as a service on the machine
+  shell: |
+    pm2 start ~/web/index.js -f

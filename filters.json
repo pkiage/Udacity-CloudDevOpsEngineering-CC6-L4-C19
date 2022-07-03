@@ -1,0 +1,10 @@
+[
+    {
+        "Name": "instance-type",
+        "Values": ["t2.micro"]
+    },
+    {
+        "Name": "availability-zone",
+        "Values": ["us-west-2c"]
+    }
+]
