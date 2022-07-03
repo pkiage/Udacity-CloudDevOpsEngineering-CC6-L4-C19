@@ -1,2 +1,2 @@
 [all]
-34-216-31-215
+ec2-34-216-31-215.us-west-2.compute.amazonaws.com
